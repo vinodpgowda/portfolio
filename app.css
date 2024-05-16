@@ -1,0 +1,48 @@
+body {
+    background-color: #e3d5ca;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+    color: black;
+    margin-bottom: 0;
+}
+
+#tagline {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 0;
+
+}
+
+aside {
+ height: 100%;
+ width: 20%;
+ border: 1px solid black;
+ text-align: center;
+ background-color: rgb(85,105,220);
+}
+
+img {
+    width: 140px;
+    height: 140px;
+    margin-left: 10px;
+    border: 2px solid black;
+    border-radius: 50%;
+    box-shadow: 0 1 1 -1 0000;
+}
+
+button {
+    border: 1px solid black;
+    border-radius: 20%;
+    background-color: red;
+    text-align: center;
+    padding: 20px;
+    width: 100px;
+}
+
+button a {
+    color: white;
+    text-decoration: none;
+}
