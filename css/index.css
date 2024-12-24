@@ -1,0 +1,74 @@
+/* Home Page Layout */
+.home-page {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px;
+    gap: 30px; /* Space between text and photo */
+  }
+  
+  .intro-container {
+    display: flex;
+    flex-direction: row; /* Text on the left, photo on the right */
+    align-items: center;
+    max-width: 1200px; /* Constrain content width */
+    width: 100%;
+    padding: 0 15px;
+    gap: 30px;
+    overflow-x: hidden;
+    box-sizing: border-box; /* Ensure padding is included in the width */
+  }
+  
+  .intro-text {
+    flex: 1;
+    text-align: left;
+    font-size: 20px;
+  }
+  
+  .intro-text h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #ffffff;
+  }
+  
+  .intro-text p {
+    color: #aaaaaa;
+    font-size: 18px;
+  }
+  
+  .intro-photo {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .intro-photo img {
+    width: 300px; /* Adjust size as needed */
+    height: auto;
+    border-radius: 50%; /* Circular photo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+  }
+  
+  /* For Mobile View: Stack content vertically */
+@media (max-width: 600px) {
+  .intro-container {
+      flex-direction: column; /* Stack elements vertically */
+      gap: 20px; /* Reduce gap between elements */
+      padding: 0 10px; /* Adjust padding for smaller screens */
+  }
+
+  .intro-photo img {
+      width: 200px; /* Reduce image size for mobile */
+  }
+
+  .intro-text {
+      text-align: center; /* Center-align text for a clean look */
+  }
+
+  .intro-text h1 {
+      font-size: 24px; /* Adjust font size */
+  }
+
+  .intro-text p {
+      font-size: 16px; /* Adjust paragraph font size */
+  }
+}

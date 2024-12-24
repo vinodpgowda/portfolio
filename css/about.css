@@ -1,0 +1,75 @@
+/* About Section */
+.about-section {
+    padding: 50px;
+  }
+  
+  .about-container {
+    max-width: 1200px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  /* Row for First Paragraph and Photo */
+  .about-row {
+    display: flex;
+    flex-direction: row;
+    align-items: center; /* Vertically align text and photo */
+  }
+  
+  .about-row p {
+    flex: none; /* Prevent flex-grow from affecting width */
+    width: 50%; /* Ensure it respects the width */
+    font-size: 18px;
+    line-height: 1.8;
+    margin: 0;
+    color: #ffffff; /* Same text style as others */
+  }
+  
+  /* Photo Styling */
+  .about-photo {
+    flex: none; /* Prevent flex-grow */
+    text-align: center;
+  }
+  
+  .about-photo img {
+    width: 250px; /* Adjust photo size */
+    height: auto;
+    border-radius: 50%; /* Circular photo */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  }
+  
+  /* Additional Text Paragraphs */
+  .about-text {
+    width: 50%; /* Same width as the first paragraph */
+    text-align: left;
+    color: #ffffff;
+    font-size: 18px;
+    line-height: 1.8;
+  }
+  
+  .about-text p {
+    margin-bottom: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 600px) {
+    .about-row {
+      flex-direction: column; /* Stack photo and text vertically */
+      align-items: flex-start; /* Align content to the left */
+    }
+  
+    .about-photo {
+      align-self: center; /* Center the photo for mobile */
+    }
+  
+    .about-text {
+      width: 100%; /* Full width for mobile */
+    }
+  
+    .about-row p {
+      width: 100%; /* Full width for mobile */
+    }
+  }
+  
