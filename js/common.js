@@ -1,5 +1,5 @@
 // Load the header
-fetch('/components/header.html')
+fetch('./components/header.html')
   .then(response => response.text())
   .then(data => {
     document.querySelector('header').outerHTML = data;
@@ -26,7 +26,7 @@ fetch('/components/header.html')
   .catch(error => console.error('Error loading header:', error));
 
 // Load the footer
-fetch('/components/footer.html')
+fetch('./components/footer.html')
   .then(response => response.text())
   .then(data => {
     document.querySelector('footer').outerHTML = data;
