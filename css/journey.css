@@ -1,0 +1,77 @@
+/* Journey Page */
+.journey-page {
+  padding: 50px 20px; /* Ensure responsive padding */
+  display: flex;
+  flex-direction: column; /* Keep vertical layout */
+  align-items: center; /* Center-align the timeline on all screens */
+}
+
+/* Timeline Container */
+.timeline {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* Align to the left */
+  gap: 40px; /* Space between items */
+  border-left: 8px solid rgba(255, 255, 255, 0.2); /* Light white vertical line */
+  padding-left: 50px; /* Space for timeline content */
+  max-width: 800px; /* Constrain width for better readability */
+  width: 100%; /* Full width for mobile */
+}
+
+/* Indicator Points */
+.indicator {
+  position: absolute;
+  left: -11px; /* Center the indicator on the line */
+  width: 22px;
+  height: 22px;
+  background-color: #ffffff; /* Solid white */
+  border-radius: 50%; /* Circular shape */
+  z-index: 1; /* Stay on top of the timeline line */
+}
+
+/* Year Labels */
+.year {
+  position: absolute;
+  left: -80px; /* Position to the left of the line */
+  font-size: 16px;
+  color: rgba(255, 255, 255, 0.6); /* Subtle white text */
+  width: 50px;
+  text-align: right;
+}
+
+/* Timeline Boxes */
+.timeline-box {
+  background-color: #1e293b; /* Dark background for contrast */
+  color: #ffffff;
+  padding: 15px 20px; /* Consistent padding */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
+  width: 100%; /* Full width by default */
+  max-width: 400px; /* Same width for all boxes */
+  flex-shrink: 0; /* Prevent resizing of boxes */
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 600px) {
+  .timeline {
+      padding-left: 30px; /* Adjust padding for smaller screens */
+      align-items: center; /* Center align on mobile */
+  }
+
+  .year {
+      left: -60px; /* Adjust positioning */
+      font-size: 14px;
+  }
+
+  .timeline-box {
+      width: 100%; /* Full width on smaller screens */
+      max-width: 100%; /* Remove constraint on mobile */
+  }
+
+  .indicator {
+      left: -7px; /* Adjust positioning */
+      width: 18px;
+      height: 18px;
+  }
+}
