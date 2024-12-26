@@ -108,6 +108,8 @@ header {
     font-size: 24px;
     cursor: pointer;
     color: #ffffff;
+    position: relative;
+    z-index: 1000;
   }
   
   @media (max-width: 600px) {
@@ -162,5 +164,5 @@ footer {
 }
 
 .social-icon:hover {
-    transform: scale(1.2);
+    transform: scale(1.5);
 }

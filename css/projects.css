@@ -4,7 +4,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: calc(100vh - 60px); /* Full height minus header and footer (adjust as needed) */
     margin: 0;
 }
 
@@ -107,5 +106,64 @@
     .project-box.large {
         grid-column: span 1; /* Single column */
         grid-row: span 1;
+    }
+}
+
+.projects-section {
+    display: flex;
+    flex-direction: column; /* Stack child elements vertically */
+    align-items: center; /* Center align content */
+    padding: 4rem 8rem 2rem 8rem; /* Add some padding */
+}
+
+.projects-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal columns */
+    grid-auto-rows: 1fr; /* Maintain equal height rows */
+    gap: 20px;
+    width: 100%; /* Full width */
+    max-width: 1200px; /* Constrain width for large screens */
+    margin-bottom: 2rem; /* Add spacing below the projects container */
+}
+
+.connect-button-container {
+    text-align: center;
+    margin-top: 2rem; /* Add spacing above the button */
+}
+
+.connect-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.connect-button:hover {
+    transform: scale(1.1); /* Slight magnification on hover */
+}
+
+.circle-arrow {
+    transition: transform 0.3s ease;
+}
+
+.connect-button:hover .circle-arrow {
+    transform: scale(1.2); /* Magnifies the circle-arrow slightly more */
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .projects-container {
+        grid-template-columns: repeat(2, 1fr); /* Two columns for medium screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .projects-container {
+        grid-template-columns: 1fr; /* Single column for small screens */
     }
 }

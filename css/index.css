@@ -72,3 +72,28 @@
       font-size: 16px; /* Adjust paragraph font size */
   }
 }
+.discover-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1.1rem;
+  font-weight: bold;
+  transition: transform 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.discover-button:hover {
+  transform: scale(1.1); /* Magnifies the text and button together */
+}
+
+.circle-arrow {
+  transition: transform 0.3s ease, stroke 0.3s ease;
+}
+
+.discover-button:hover .circle-arrow {
+  transform: scale(1.15); /* Slightly larger magnification for the circle-arrow */
+  stroke: #0073e6; /* Matches hover color */
+}
