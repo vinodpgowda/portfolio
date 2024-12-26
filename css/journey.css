@@ -1,77 +1,192 @@
 /* Journey Page */
 .journey-page {
-  padding: 50px 20px; /* Ensure responsive padding */
+  padding: 20px;
   display: flex;
-  flex-direction: column; /* Keep vertical layout */
-  align-items: center; /* Center-align the timeline on all screens */
+  flex-direction: column;
+  align-items: center;
 }
 
-/* Timeline Container */
+/* Content Container */
+.content-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  gap: 20px;
+  padding-left: 80px;
+  margin-bottom: 100px;
+  z-index: 1;
+}
+
+/* Title */
+.journey-title {
+  font-size: 2rem;
+  margin-bottom: 40px;
+  text-align: center;
+  width: 100%;
+}
+
+/* Timeline Wrapper */
+.timeline-wrapper {
+  width: 90%; /* Set proportional width for the entire timeline container */
+  max-width: 50%; /* Restrict max width for large screens */
+  margin: 0px; /* Center align the wrapper */
+  position: relative;
+  padding-right: 5%; /* Add padding to the right to end earlier */
+  flex: 2;
+}
+
+/* Timeline */
 .timeline {
   position: relative;
   display: flex;
   flex-direction: column;
-  align-items: flex-start; /* Align to the left */
-  gap: 40px; /* Space between items */
-  border-left: 8px solid rgba(255, 255, 255, 0.2); /* Light white vertical line */
-  padding-left: 50px; /* Space for timeline content */
-  max-width: 800px; /* Constrain width for better readability */
-  width: 100%; /* Full width for mobile */
-}
-
-/* Indicator Points */
-.indicator {
-  position: absolute;
-  left: -11px; /* Center the indicator on the line */
-  width: 22px;
-  height: 22px;
-  background-color: #ffffff; /* Solid white */
-  border-radius: 50%; /* Circular shape */
-  z-index: 1; /* Stay on top of the timeline line */
+  gap: 20px;
+  border-left: 4px solid rgba(255, 255, 255, 0.2);
+  padding-left: 50px; /* Space for indicators */
 }
 
 /* Year Labels */
 .year {
   position: absolute;
-  left: -80px; /* Position to the left of the line */
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.6); /* Subtle white text */
-  width: 50px;
+  left: -90px; /* Adjust relative to the wrapper */
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.9);
   text-align: right;
+  width: 70px; /* Ensure enough space for years */
+}
+
+/* Indicator Points */
+.indicator {
+  position: absolute;
+  left: -10px; /* Align to the timeline line */
+  width: 16px;
+  height: 16px;
+  background-color: #ffffff;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 /* Timeline Boxes */
 .timeline-box {
-  background-color: #1e293b; /* Dark background for contrast */
+  background-color: #1e293b;
   color: #ffffff;
-  padding: 15px 20px; /* Consistent padding */
-  border-radius: 8px; /* Rounded corners */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Subtle shadow */
-  width: 100%; /* Full width by default */
-  max-width: 400px; /* Same width for all boxes */
-  flex-shrink: 0; /* Prevent resizing of boxes */
+  padding: 12px 16px;
+  border-radius: 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  font-size: 1rem;
+  line-height: 1.5;
+  width: 100%; /* Full width inside the wrapper */
+  max-width: 95%;
 }
 
-/* Responsive Design for Mobile */
-@media (max-width: 600px) {
+/* Right Container for Button */
+.right-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Let’s Connect Button */
+.see-work-button-container {
+  text-align: center;
+}
+
+.see-work-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+  text-decoration: none;
+  color: inherit;
+  font-size: 1rem;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.see-work-button:hover {
+  transform: scale(1.1);
+}
+
+.circle-arrow {
+  transition: transform 0.3s ease;
+}
+
+.see-work-button:hover .circle-arrow {
+  transform: scale(1.2);
+}
+
+/* Responsive Design for Tablets */
+@media (max-width: 768px) {
+
+  .content-container {
+    flex-direction: column; /* Stack the timeline and button */
+    align-items: center;
+    padding-left: 20px; /* Adjust padding for smaller screens */
+  }
+
+
+  .timeline-wrapper {
+      width: 95%; /* Expand slightly for smaller screens */
+  }
+
   .timeline {
-      padding-left: 30px; /* Adjust padding for smaller screens */
-      align-items: center; /* Center align on mobile */
+      padding-left: 30px; /* Reduce padding for smaller screens */
   }
 
   .year {
-      left: -60px; /* Adjust positioning */
-      font-size: 14px;
-  }
-
-  .timeline-box {
-      width: 100%; /* Full width on smaller screens */
-      max-width: 100%; /* Remove constraint on mobile */
+      left: -70px; /* Adjust year positioning */
+      font-size: 0.9rem;
   }
 
   .indicator {
-      left: -7px; /* Adjust positioning */
-      width: 18px;
-      height: 18px;
+      left: -8px; /* Adjust for alignment */
+      width: 14px;
+      height: 14px;
+  }
+
+  .timeline-box {
+      padding: 10px 14px;
+      font-size: 0.95rem;
+  }
+}
+
+/* Responsive Design for Mobile */
+@media (max-width: 480px) {
+
+  .content-container {
+    flex-direction: column; /* Stack the timeline and button */
+    align-items: center;
+    padding: 0 10px; /* Narrower padding for mobile */
+  }
+
+  .timeline-wrapper {
+      width: 100%; /* Use full width for mobile */
+      max-width: 75%;
+      padding: 0 10px;
+  }
+
+  .timeline {
+      padding-left: 15px; /* Adjust padding */
+  }
+
+  .year {
+      left: -70px; /* Keep years visible */
+      font-size: 0.85rem;
+      width: 60px;
+  }
+
+  .indicator {
+      left: -8px; /* Adjust for alignment */
+      width: 12px;
+      height: 12px;
+  }
+
+  .timeline-box {
+      padding: 8px 12px;
+      font-size: 0.85rem;
   }
 }

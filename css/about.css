@@ -20,7 +20,7 @@
   
   .about-row p {
     flex: none; /* Prevent flex-grow from affecting width */
-    width: 50%; /* Ensure it respects the width */
+    width: 70%; /* Ensure it respects the width */
     font-size: 18px;
     line-height: 1.8;
     margin: 0;
@@ -42,7 +42,7 @@
   
   /* Additional Text Paragraphs */
   .about-text {
-    width: 50%; /* Same width as the first paragraph */
+    width: 70%; /* Same width as the first paragraph */
     text-align: left;
     color: #ffffff;
     font-size: 18px;
@@ -73,3 +73,31 @@
     }
   }
   
+  .explore-button-container {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.explore-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+    text-decoration: none;
+    color: inherit;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.explore-button:hover {
+    transform: scale(1.1); /* Magnifies the button and text */
+}
+
+.circle-arrow {
+    transition: transform 0.3s ease;
+}
+
+.explore-button:hover .circle-arrow {
+    transform: scale(1.2); /* Slightly larger magnification for the circle-arrow */
+}
