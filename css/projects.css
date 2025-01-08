@@ -7,6 +7,13 @@
     margin: 0;
 }
 
+.project-title{ 
+    font-size: 2rem;
+    margin-bottom: 40px;
+    text-align: center;
+    width: 100%;
+}
+
 /* Projects Container */
 .projects-container {
     display: grid;
@@ -81,7 +88,7 @@
 /* Adjust Large Project Box */
 .project-box.large {
     grid-column: span 2; /* Large project spans two columns */
-    grid-row: span 2; /* Large project spans two rows */
+    grid-row: span 1; /* Large project spans two rows */
 }
 
 /* Responsive Design */
@@ -113,7 +120,7 @@
     display: flex;
     flex-direction: column; /* Stack child elements vertically */
     align-items: center; /* Center align content */
-    padding: 4rem 8rem 2rem 8rem; /* Add some padding */
+    padding: 2rem 8rem 2rem 8rem; /* Add some padding */
 }
 
 .projects-container {
@@ -137,7 +144,7 @@
     gap: 1rem;
     text-decoration: none;
     color: inherit;
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: bold;
     transition: transform 0.3s ease;
     cursor: pointer;
